@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captcha Simple</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+    }
+
+    .captcha-box {
+      background-color: #f0f0f0;
+      padding: 10px 20px;
+      font-size: 24px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      user-select: none;
+      margin-bottom: 10px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .mensaje {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="captcha-box" id="captcha">C4P7C4</div>
+
+  <input type="text" id="captcha-input" placeholder="Escribe el texto que ves">
+  <button onclick="verificarCaptcha()">Verificar</button>
+
+  <div class="mensaje" id="mensaje"></div>
+
+  <script>
+    // Función para generar un captcha aleatorio
+    function generarCaptcha() {
+      const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+      let resultado = '';
+      for (let i = 0; i < 6; i++) {
+        resultado += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return resultado;
+    }
+
+    // Inicializar captcha
+    let captchaCorrecto = generarCaptcha();
+    document.getElementById('captcha').textContent = captchaCorrecto;
+
+    function verificarCaptcha() {
+      const entrada = document.getElementById('captcha-input').value.trim().toUpperCase();
+      const mensaje = document.getElementById('mensaje');
+
+      if (entrada === captchaCorrecto) {
+        mensaje.textContent = '✅ Captcha correcto';
+        mensaje.style.color = 'green';
+      } else {
+        mensaje.textContent = '❌ Captcha incorrecto. Intenta de nuevo.';
+        mensaje.style.color = 'red';
+        // Regenerar nuevo captcha
+        captchaCorrecto = generarCaptcha();
+        document.getElementById('captcha').textContent = captchaCorrecto;
+      }
+    }
+  </script>
+
+</body>
+</html>

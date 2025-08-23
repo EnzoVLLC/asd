@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos de Progamacion</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="light">
+
+    <h1>Los mejores cursos de programacion faciles y rapidos de aprender</h1>
+    <br>
+    <h2> HTML Y CSS</h2>
+    <img class="html" src="images/html_css.png" alt="html" width="200">
+    <p class="qhtml">🧱 ¿Qué es HTML?: </p>  <p> HTML significa HyperText Markup Language (Lenguaje de Marcado de Hipertexto). Es el lenguaje estándar que se usa para crear y estructurar páginas web. No es un lenguaje de programación como JavaScript o Python, sino un lenguaje de marcado, lo que significa que su función principal es describir la estructura y el contenido de una página web.</p>
+  <!-- Interruptor -->  
+  <label class="theme-switch">
+    <input type="checkbox" id="toggle-theme">
+    <span class="slider"></span>
+  </label>
+  <script>
+    const toggle = document.getElementById('toggle-theme');
+    const body = document.body;
+
+    toggle.addEventListener('change', () => {
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+    });
+  </script>
+
+</body>
+</html>

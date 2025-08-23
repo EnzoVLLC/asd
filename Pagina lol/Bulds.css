@@ -1,0 +1,85 @@
+/* ...existing code... */
+.header-bulds {
+    background: linear-gradient(90deg, #413f3f 0%, #e48686 100%);
+    padding: 0px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    gap: 10px;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+.main-nav a:hover {
+    color: #f9d923;
+}
+.searchbox-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.searchbox-header input {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.searchbox-header button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #f9d923;
+    color: #232526;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.searchbox-header button:hover {
+    background: #ffe066;
+}
+.footer-content {
+    text-align: center;
+    padding: 1px 2px;
+    background: rgba(255,255,255,0.15); /* Más transparente */
+    backdrop-filter: blur(2px); /* Suaviza el fondo */
+    border-top: 1px transparent rgba(200,200,200,0.10);
+    font-size: 15px;
+    color: #232526;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.02);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   
+    position: fixed;
+}
+.footer-content p {
+    margin: 0;
+    font-size: 10px;
+    color: #232526;
+    letter-spacing: 0.5px;
+    border-top: transparent rgba(200,200,200,0.10);
+    opacity: 0.80;
+}
